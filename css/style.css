@@ -1,0 +1,121 @@
+:root {
+  --grey-color: grey; 
+  --white-color: white;
+  --green-color: green;
+  --red-color: red;
+  font-family: "Titillium Web";
+  font-size: 16px;
+  font-weight: medium;
+}
+
+.container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--grey-color);
+}
+
+.card {
+  width: 500px;
+  margin: 2rem auto;
+  border-radius: 2rem 2rem 0 0;
+  overflow: hidden;
+  background-color: var(--white-color);
+}
+
+.header {
+  position: relative;
+  height: 350px;
+  /* this svg in not optimized! */
+  background-image: url("../images/header.svg");
+  background-size: cover;
+}
+
+.clear {
+  font-size: 3rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  color: var(--white-color);
+}
+
+.clearAnimation {
+  transform: rotate(360deg);
+  transition: 0.3s linear;
+}
+
+#date { 
+  font-size: 2rem;
+  position: absolute;
+  left: 1rem;
+  bottom: 0.5rem;
+  color: var(--white-color);
+}
+
+.card-content {
+  overflow: auto;
+}
+
+#list {
+  height: 20rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  position: relative;
+  display: flex;
+  font-size: 1.25rem;
+  padding: 1rem 1rem;
+  flex-wrap: nowrap;
+  border-bottom: 1px solid var(--grey-color);
+}
+
+.item-group {
+  flex-grow: 1;
+  user-select: none;
+}
+
+.crossed {
+  text-decoration: line-through;
+}
+
+.remove-icon {
+  margin-left: 1rem;
+  transition: 0.3s;
+}
+
+.remove-icon:hover {
+  color: var(--red-color);
+  transform: scale(1.2);
+  transition: 0.3s;
+}
+
+.indicator-icon {
+  margin-right: 0.5rem;
+}
+
+
+.card-footer {
+  font-size: 2rem;
+  position: relative;
+  padding: 1rem;
+  border-top: 1px solid var(--grey-color);
+}
+
+#add-todo-icon {
+  font-size: 2.5rem;
+  color: var(--green-color);
+}
+
+#input, #input:focus {
+  border: 0;
+  padding: 0.5rem;
+}
+
+#input:focus {
+  outline: none;
+}
